@@ -1,0 +1,41 @@
+.nav__item {
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: middle; 
+    
+    
+    &.nav__item:last-child {
+      margin-right: 0;
+      
+      
+      &.nav__item:last-child:after {
+        display: none; }
+    }
+}
+
+.nav__item:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: white;
+    margin: 0 14px; 
+}
+
+.nav__link {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    font-family: Ubuntu, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+
+    &:hover{
+        text-decoration: underline;
+    }
+}
