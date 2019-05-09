@@ -1,11 +1,11 @@
-@charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 body {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  font-family: Ubuntu, Verdana, Arial, sans-serif; }
 
 html {
   width: 100%;
@@ -27,13 +27,13 @@ a {
 
 .wrapper {
   width: 100%;
-  height: 100%;
-  overflow: scroll;
+  min-width: 960px;
+  min-height: 100%;
   position: relative; }
 
 .container {
   max-width: 940px;
-  min-width: 205px;
+  min-width: 320px;
   width: 95%;
   margin: 0 auto;
   display: -webkit-box;
@@ -43,6 +43,28 @@ a {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column; }
+
+#content {
+  height: 100%;
+  min-height: 40.625rem;
+  -webkit-transition: -webkit-transform 0.7s;
+  transition: -webkit-transform 0.7s;
+  -o-transition: transform 0.7s;
+  transition: transform 0.7s;
+  transition: transform 0.7s, -webkit-transform 0.7s;
+  will-change: transform; }
+
+.section {
+  height: 100vh;
+  min-height: 650px; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+footer {
+  position: relative;
+  width: 100%; }
 
 .logo {
   display: inline-block;
@@ -56,19 +78,39 @@ a {
 /* Fonts */
 @font-face {
   font-family: Ubuntu;
-  src: url(/fonts/Ubuntu-L.ttf); }
+  font-weight: normal;
+  font-style: normal;
+  src: url("../../fonts/ubuntu-r-webfont.woff") format("woff"), url("../../fonts/ubuntu-r-webfont.woff2") format("woff2"); }
 
 @font-face {
-  font-family: Lifehack;
-  src: url("/fonts/DearType - Lifehack Basic.otf"); }
+  font-family: Ubuntu;
+  font-weight: 600;
+  font-style: normal;
+  src: url("../../fonts/ubuntu-b-webfont.woff") format("woff"), url("../../fonts/ubuntu-b-webfont.woff2") format("woff2"); }
+
+@font-face {
+  font-family: Ubuntu;
+  font-weight: 300;
+  font-style: normal;
+  src: url("../../fonts/ubuntu-l-webfont.woff") format("woff"), url("../../fonts/ubuntu-l-webfont.woff2") format("woff2"); }
+
+@font-face {
+  font-family: Ubuntu;
+  font-weight: 500;
+  font-style: normal;
+  src: url("../../fonts/ubuntu-m-webfont.woff") format("woff"), url("../../fonts/ubuntu-m-webfont.woff2") format("woff2"); }
 
 @font-face {
   font-family: LifehackMedium;
-  src: url("/fonts/DearType - Lifehack Medium.otf"); }
+  font-weight: normal;
+  font-style: normal;
+  src: url("../../fonts/lifehack_medium-webfont.woff") format("woff"), url("../../fonts/lifehack_medium-webfont.woff2") format("woff2"); }
 
 @font-face {
   font-family: Gagalin-Regular;
-  src: url(/fonts/Gagalin-Regular.otf); }
+  font-weight: normal;
+  font-style: normal;
+  src: url("../../fonts/gagalin-regular-webfont.woff") format("woff"), url("../../fonts/gagalin-regular-webfont.woff2") format("woff2"); }
 
 .best {
   background: url("../img/background/bg.png") no-repeat;
@@ -165,8 +207,7 @@ a {
   justify-content: space-between;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
-  width: 100%; }
+  align-items: center; }
   .header .header__menu {
     -webkit-box-flex: 1;
     -ms-flex: 1;
@@ -184,7 +225,7 @@ a {
     /* Error */ }
 
 .main {
-  background: url("../img/background/video-bg.png") 50% 50% no-repeat;
+  background: url("../img/background/video-bg.png") center center/cover no-repeat;
   background-size: cover;
   position: relative; }
 
@@ -300,40 +341,48 @@ a {
 .points__list {
   position: fixed;
   top: 5.625rem;
-  right: 8.2rem; }
+  right: 2.5rem; }
+
+.points__link {
+  width: 1rem;
+  height: 1rem;
+  display: block;
+  position: relative; }
+  .points__link:after, .points__link:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 50%; }
+  .points__link:after {
+    width: 6px;
+    height: 6px;
+    background: #fff; }
+  .points__link:before {
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    opacity: 0;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s; }
+  .points__link:hover:before {
+    width: 14px;
+    height: 14px;
+    opacity: 1; }
+
+.points__item.active .points__link:before {
+  width: 14px;
+  height: 14px;
+  opacity: 1; }
 
 .points__item {
   margin-bottom: 5px; }
-
-/* Переключатели */
-.radio input {
-  display: none; }
-
-.radio span {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 16px;
-  height: 16px;
-  background: #fdfcfc;
-  border-radius: 50%;
-  -webkit-box-shadow: inset 0 0 5px rgba(251, 251, 251, 0.5);
-  box-shadow: inset 0 0 5px rgba(251, 251, 251, 0.5); }
-
-.radio input:checked + span {
-  background: black; }
-
-.radio input:checked + span:before {
-  content: '';
-  position: absolute;
-  left: 5px;
-  top: 5px;
-  background: #fff;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  line-height: 10px; }
 
 .reviews {
   background: #000; }
@@ -388,12 +437,15 @@ a {
   background-repeat: no-repeat;
   position: relative;
   display: inline-block;
-  border: 1px solid black;
   overflow: hidden; }
 
 .review__photo-img {
-  width: 316px;
-  height: 373px; }
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1); }
 
 .review__photo:hover:after {
   content: "";
@@ -457,8 +509,9 @@ a {
   .review__button button:hover {
     background-color: #1f2122; }
 
-section {
-  min-height: 40.625rem;
+.section {
+  height: 100vh;
+  min-height: 650px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -469,7 +522,6 @@ section {
   color: #f9b43b;
   font-size: 75px;
   font-family: Gagalin-Regular;
-  font-weight: bold;
-  font-style: normal;
+  font-weight: normal;
   text-transform: uppercase;
   margin-bottom: 50px; }
