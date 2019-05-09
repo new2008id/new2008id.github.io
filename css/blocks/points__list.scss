@@ -1,42 +1,55 @@
 .points__list {
     position: fixed;
     top: 5.625rem;
-    right: 8.2rem; 
+    right: 2.5rem; 
 
 } 
+
+.points__link {
+    width: 1rem;
+    height: 1rem;
+    display: block;
+    position: relative; 
+
+    &:after, &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%; 
+    }
+
+    &:after {
+        width: 6px;
+        height: 6px;
+        background: #fff; 
+    }
+
+    &:before {
+        width: 0px;
+        height: 0px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        opacity: 0;
+        transition: .3s; 
+    }
+
+    &:hover:before {
+        width: 14px;
+        height: 14px;
+        opacity: 1; 
+    }
+}
+
+.points__item.active .points__link:before {
+    width: 14px;
+    height: 14px;
+    opacity: 1; 
+}
 
 .points__item {
     margin-bottom: 5px; 
 }
-
-
-/* Переключатели */
-
-.radio input { 
-    display: none; 
-}
-           
-.radio span {
-    position: relative; 
-    display: flex; 
-    width: 16px; 
-    height: 16px; 
-    background: rgb(253, 252, 252);
-    border-radius: 50%; 
-    box-shadow: inset 0 0 5px rgba(251, 251, 251, 0.5); 
-}
-.radio input:checked + span { 
-    background: black;
-}
-           
-.radio input:checked + span:before { 
-    content: '';
-    position: absolute;
-    left: 5px; 
-    top: 5px;
-    background: #fff;
-    width: 6px; 
-    height: 6px;
-    border-radius: 50%;
-    line-height: 10px;
-}
+  
