@@ -1,3 +1,19 @@
+.nav {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+.nav__list {
+    width: 100%; 
+
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
 .nav__item {
     white-space: nowrap;
     display: inline-block;
@@ -17,17 +33,17 @@
     content: "";
     display: inline-block;
     vertical-align: middle;
-    width: 4px;
-    height: 4px;
+    width: 0.25rem;
+    height: 0.25rem;
     border-radius: 50%;
     background: white;
-    margin: 0 14px; 
+    margin: 0 0.875rem; 
 }
 
 .nav__link {
     display: inline-block;
     vertical-align: middle;
-    font-size: 13px;
+    font-size: 0.8125rem;
     text-transform: uppercase;
     color: white;
     text-decoration: none;
