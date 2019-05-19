@@ -1,18 +1,33 @@
 .section {
     height: 100vh;
-    min-height: 650px;
+    min-height: 40.625rem;
     position: relative;
     display: flex;
     overflow: auto;
+
+    @include tablets {
+        overflow: hidden;
+    }
 }
+
 
 .section__title {
     color: #f9b43b;
-    font-size: 75px;
+    font-size: 4.6875rem;
     font-family: Gagalin-Regular;
     font-weight: normal;
     
     text-transform: uppercase;
-    margin-bottom: 50px;
+    margin-bottom: 3.125rem;
 
+    @include phones {
+        font-size: 3.125rem;
+        text-align: center;
+        width: 100%;
+        
+    }
+
+    @include phones {
+        font-size: 4.125rem;
+    }
 }

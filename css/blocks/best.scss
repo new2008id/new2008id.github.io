@@ -8,6 +8,10 @@
 
     .best__list {
         display: flex; 
+
+        @include phones {
+            flex-direction: column;
+        }
     }
 
     .best__icon {
@@ -18,28 +22,39 @@
 
 .section__title {
     line-height: 1em; 
-    margin-bottom: 50px
+    margin-bottom: 3.125rem;
 }
 
 .section__title.section__title-black {
     color: #2f3234;
-    margin-top: -40px;
+    margin-top: -2.5rem;
 }
 
 .best__item {
-    margin-bottom: 50px;
-    padding: 0 15px;
+    margin-bottom: 3.125rem;
+    padding: 0 0.9375rem;
     display: flex;
     flex-direction: column;
     flex: 1; 
+
+    @include phones {
+        flex-direction: row;
+    }
 }
 
 .best__img {
     margin-bottom: 0.9375rem; 
 }
 
+.best__desc {
+    
+    @include phones {
+        text-align: left; 
+    }
+}
+
 .best__name {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: LifehackMedium;
     font-weight: 500;
     font-style: normal;
@@ -50,9 +65,9 @@
 
 .best__text p {
     font-family: Ubuntu;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 1.8;
     font-weight: 300;
-    line-height: 24.07px;   
+    line-height: 1.5rem;   
     color: #2f3234;
 }

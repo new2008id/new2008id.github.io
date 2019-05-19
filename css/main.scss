@@ -2,6 +2,7 @@
 @import '_variant/setup.scss';
 @import '_variant/font.scss';
 
+
 // Block
 @import 'blocks/best.scss';
 @import 'blocks/btn.scss';
@@ -11,3 +12,17 @@
 @import 'blocks/points__list.scss';
 @import 'blocks/reviews.scss';
 @import 'blocks/section.scss';
+@import 'blocks/team.scss';
+@import 'blocks/menu.scss';
+@import 'blocks/map.scss';
+@import 'blocks/footer.scss';
+@import 'blocks/form.scss';
+@import 'blocks/hamburger__menu.scss';
+
+
+
+// breakponts
+$desktop: 1200px;
+$laptop: 992px;
+$tablets: 768px;
+$phones: 480px;

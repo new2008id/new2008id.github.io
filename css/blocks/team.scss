@@ -1,0 +1,169 @@
+.team {
+    background: url("/img/team/bg/SBS_1255-X2.png") top no-repeat;
+    background-size: cover; 
+
+    .team .section__title {
+        margin-bottom: 5rem; 
+    }
+}
+
+
+
+.team__wrapper {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    background: rgba(47, 50, 52, 0.93);
+    padding: 5% 2% 0 7%;
+
+    @include tablets {
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+.team__accordeon-item {
+    margin-bottom: 1.75rem; 
+
+    @include tablets {
+        text-align: center;
+    }
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+    
+.team__accordeon-item.is-active .team__accordeon-link {
+    color: #f9b43b;
+    
+    &.team__accordeon-link:before {
+        transform: rotate(-180deg);
+    }
+}
+
+.is-active > .team__accordeon-details {
+    height: 100%;
+}
+
+
+.team__accordeon-link {
+    color: #fff;
+    font-size: 0.875rem;
+    font-family: Gagalin-Regular, cursive;
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    display: block; 
+
+    @include tablets {
+        display: inline-flex;
+        font-size: 1.875rem;
+    }
+
+    
+
+    &:before, &:after{
+        content: "";
+        display: block;
+        position: absolute;
+        left: -1.125rem;
+        top: 0.5rem;
+        width: 0;
+        height: 0;
+    }
+
+    &:before{
+        border-top: 0.4375rem solid #f9b43b;
+        border-left: 0.3125rem solid transparent;
+        border-right: 0.3125rem solid transparent;
+        border-bottom: 0px solid transparent;
+        transform: rotate(0deg);
+        transition: .3s;
+        
+    }
+
+    &:after{
+        display: none;
+        border-bottom: 0.4375rem solid #f9b43b;
+        border-left: 0.3125rem solid transparent;
+        border-right: 0.3125rem solid transparent;
+        border-top: 0px solid transparent; 
+    }
+}
+
+.team__accordeon-details {
+    padding-top: 1.25rem;
+    height: 0;
+    overflow: hidden;
+    line-height: 1.5rem;
+    display: flex;
+
+    @include tablets {
+        flex-direction: column; 
+        align-items: center; 
+        
+    }
+
+
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+
+
+
+
+.team__accordeon-photo {
+    margin-right: 1.25rem; 
+
+    @include tablets {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .team__accordeon-img{
+        display: inline-block;
+        vertical-align: top;
+        width: 6.25rem;
+        height: 6.25rem;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        border-radius: 50%; 
+    }
+}
+
+.team__accordeon-desc{
+    width: 70%;
+}
+
+.team__accordeon-post {
+    font-family: Ubuntu, Verdana, Arial, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 0.875rem;
+    color: #fff;
+    margin-bottom: 0.875rem;
+}
+
+.team__accordeon-about {
+    font-family: Ubuntu, Verdana, Arial, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #fff;
+    font-size: 0.875rem; 
+}
+
+
+
+
+
