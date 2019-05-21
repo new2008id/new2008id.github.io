@@ -28,6 +28,11 @@
 .section__title.section__title-black {
     color: #2f3234;
     margin-top: -2.5rem;
+
+    @include small-phones {
+        margin-top: 3.5rem;
+        font-size: 3.125rem;
+    }
 }
 
 .best__item {
@@ -40,10 +45,18 @@
     @include phones {
         flex-direction: row;
     }
+
+    @include small-phones {
+        margin-bottom: 1.125rem;
+    }
 }
 
 .best__img {
     margin-bottom: 0.9375rem; 
+
+    @include small-phones {
+        margin: 0;
+    }
 }
 
 .best__desc {

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
@@ -154,6 +155,10 @@ footer {
 .section__title.section__title-black {
   color: #2f3234;
   margin-top: -2.5rem; }
+  @media screen and (max-width: 320px) {
+    .section__title.section__title-black {
+      margin-top: 3.5rem;
+      font-size: 3.125rem; } }
 
 .best__item {
   margin-bottom: 3.125rem;
@@ -174,9 +179,15 @@ footer {
       -webkit-box-direction: normal;
       -ms-flex-direction: row;
       flex-direction: row; } }
+  @media screen and (max-width: 320px) {
+    .best__item {
+      margin-bottom: 1.125rem; } }
 
 .best__img {
   margin-bottom: 0.9375rem; }
+  @media screen and (max-width: 320px) {
+    .best__img {
+      margin: 0; } }
 
 @media screen and (max-width: 480px) {
   .best__desc {
@@ -287,7 +298,10 @@ footer {
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
       flex-direction: column;
-      padding: 0 13%; } }
+      padding: 0 13%;
+      margin-left: 0;
+      /* Правка */
+      margin-top: 0; } }
   .main__container .main__left, .main__container .main__right {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -334,8 +348,7 @@ footer {
   line-height: 1; }
   @media screen and (max-width: 480px) {
     .main__subtitle {
-      font-size: 2.5rem;
-      margin-top: -12%; } }
+      font-size: 2.5rem; } }
 
 .down-arrow {
   width: 58.75rem;
@@ -579,6 +592,9 @@ footer {
   @media screen and (max-width: 480px) {
     .review__name {
       font-size: 1.6rem; } }
+  @media screen and (max-width: 320px) {
+    .review__name {
+      margin-bottom: 0.5625rem; } }
 
 .review__text {
   color: #ffffff;
@@ -619,7 +635,8 @@ footer {
   overflow: auto; }
   @media screen and (max-width: 768px) {
     .section {
-      overflow: hidden; } }
+      overflow: hidden;
+      min-height: initial; } }
 
 .section__title {
   color: #f9b43b;
@@ -632,7 +649,10 @@ footer {
     .section__title {
       font-size: 3.125rem;
       text-align: center;
-      width: 100%; } }
+      width: 100%;
+      margin-top: 0;
+      /*Правка */
+      margin-bottom: 1rem; } }
   @media screen and (max-width: 480px) {
     .section__title {
       font-size: 4.125rem; } }
@@ -727,7 +747,6 @@ footer {
     border-top: 0px solid transparent; }
 
 .team__accordeon-details {
-  padding-top: 1.25rem;
   height: 0;
   overflow: hidden;
   line-height: 1.5rem;
@@ -753,7 +772,9 @@ footer {
   @media screen and (max-width: 768px) {
     .team__accordeon-photo {
       margin-right: 0;
-      margin-bottom: 1rem; } }
+      margin-bottom: 1rem;
+      padding-top: 1.25rem;
+      /*Правка */ } }
   .team__accordeon-photo .team__accordeon-img {
     display: inline-block;
     vertical-align: top;
@@ -989,6 +1010,9 @@ footer {
 
 .section__title-center {
   text-align: center; }
+  @media screen and (max-width: 320px) {
+    .section__title-center {
+      font-size: 2.125rem; } }
 
 .main__form {
   display: -webkit-box;

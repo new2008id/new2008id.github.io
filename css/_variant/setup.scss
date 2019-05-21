@@ -12,6 +12,7 @@ body{
 
 $tablets: 768px;
 $phones: 480px;
+$small-phones: 320px;
                             /* mixins */
 
 @mixin tablets {
@@ -24,7 +25,13 @@ $phones: 480px;
     @media screen and (max-width: $phones) {
       @content;
     }
-  }  
+  } 
+  
+@mixin small-phones {
+    @media screen and (max-width: $small-phones) {
+        @content;
+    }
+}
 
 html {
     width: 100%;

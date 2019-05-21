@@ -98,7 +98,6 @@
 }
 
 .team__accordeon-details {
-    padding-top: 1.25rem;
     height: 0;
     overflow: hidden;
     line-height: 1.5rem;
@@ -128,6 +127,7 @@
     @include tablets {
         margin-right: 0;
         margin-bottom: 1rem;
+        padding-top: 1.25rem;               /*Правка */
     }
 
     .team__accordeon-img{
