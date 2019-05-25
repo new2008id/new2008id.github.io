@@ -21,6 +21,8 @@
     @include tablets {
         flex-direction: column;
         padding: 0 13%;
+        margin-left: 0;            /* Правка */
+        margin-top: 0;
     }
 
     .main__left, .main__right {
@@ -78,13 +80,9 @@
     text-transform: lowercase;
     line-height: 1;
 
-    @include tablets {
-        margin-bottom: 3rem;
-    }
-
     @include phones {
         font-size: 2.5rem; 
-        margin-top: -12%;
+        
     }
 }
 
