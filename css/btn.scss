@@ -1,0 +1,32 @@
+.btn{
+    display: inline-block;
+    vertical-align: top;
+    background-color: #e45028;
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 0.3125rem;
+    padding: 0.125rem 0.6875rem;
+    line-height: 1.875rem;
+    font-family: Ubuntu, Verdana, Arial, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    border: 1px solid transparent;
+    cursor: pointer;
+    outline: none;
+        
+    &:hover {
+        background-color: #c1401e; 
+        
+        
+        .btn-order {
+            padding: 0.125rem 0.6875rem; 
+        }
+    }
+}
+
+.btn-order {
+  padding: 0.125rem 0.6875rem; 
+}

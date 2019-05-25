@@ -1,0 +1,346 @@
+.slider__burger {
+    background: #f9b43b;
+  background: -moz-linear-gradient(top, #f9b43b 0%, #eb8c38 40%, #eb8c38 60%, #eb8c38 60%, #f9b43b 100%);
+  background: -webkit-linear-gradient(top, #f9b43b 0%, #eb8c38 40%, #eb8c38 60%, #eb8c38 60%, #f9b43b 100%);
+  background: linear-gradient(to bottom, #f9b43b 0%, #eb8c38 40%, #eb8c38 60%, #eb8c38 60%, #f9b43b 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9b43b', endColorstr='#f9b43b',GradientType=0 );
+  align-items: center;
+  justify-content: center;
+}
+
+.slider__burger .section__title {
+    margin: 0.625rem 0 1.875rem 0.625rem;
+}
+
+.slider__wrapper {
+    position: relative;
+}
+
+.slider__item {
+    position: relative;
+    padding-bottom: 5.3125rem;
+    display: flex; 
+
+    @include tablets {
+        padding: 0;
+        padding-top: 4.6875rem;
+        flex-direction: column; 
+    }
+
+    @include phones {
+        position: relative;
+    }
+}
+
+.slider__left, .slider__right {
+    flex: 1; 
+
+    @include tablets {
+        width: 100%;
+        text-align: center;
+        font-size: 3.125rem;
+    }
+}
+
+.slider__left {
+    text-align: center;
+    align-items: flex-end;
+    display: flex;
+    justify-content: center; 
+
+    @include tablets {
+        padding-top: 0;
+    }
+}
+
+.slider__pic {
+    max-width: 98%;
+    
+    @include tablets {
+        max-width: 65%;
+    }
+}
+
+.slider__right .section__title {
+    line-height: 1em; 
+}
+
+.slider__right {
+
+    @include tablets {
+        padding: 0 13%;
+    }
+
+    @include phones {
+        padding: 0 5%;
+    }
+}
+
+.slider__content {
+    color: white;
+    margin-bottom: 1.875rem;
+}
+
+.content__text p{
+    font-size: 0.875rem;
+    line-height: 1.8;
+}
+
+.slider__info {
+    display: flex;
+    align-items: flex-end;
+
+    @include tablets {
+        justify-content: center;
+    }
+}
+
+.slider__price {
+    display: flex;
+    align-items: flex-end;
+    color: #e35028;
+    font-family: Gagalin-Regular;
+    font-weight: normal;
+    font-style: normal;
+    text-transform: uppercase;    
+}
+
+.slider__price-amount, .slider__price-currency {
+    line-height: 1;
+}
+
+.slider__price-amount {
+    font-size: 4.5rem; 
+
+    @include tablets {
+        font-size: 3.125rem;
+    }
+}
+
+.slider__price-currency {
+    font-size: 1.875rem;
+}
+
+.slider__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2.5rem;
+    z-index: 20;
+}
+
+.slider__arrow {
+    width: 100%;
+    height: 100%; 
+}
+
+.slider__button-next {
+    right: -2.5rem;
+    width: 1.8125rem;
+    height: 0.9375rem;
+
+    @include tablets {
+        right: -0.625rem;
+    }
+
+    @include phones {
+        right: -0.625rem;
+    }
+}
+
+.slider__button-next svg {
+    transform: rotate(-90deg);
+    
+}
+
+.slider__button-prev {
+    left: -2.5rem;
+    width: 1.8125rem;
+    height: 0.9375rem;
+
+    @include tablets {
+        left: -0.625rem;
+    }
+
+    @include phones {
+        left: -0.625rem;
+    }
+}
+
+.slider__button-prev svg {
+    transform: rotate(90deg);
+}
+
+.btn__toOrder {
+    margin-left: 2rem;
+}
+
+.weight {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    opacity: .5; 
+
+    @include tablets {
+        top: 0;
+        right: 0;
+        bottom: auto;
+        left: auto; 
+    }
+}
+
+.weight__measure {
+    background: url('../../img/svg/slider/kkal.svg') 50% no-repeat;
+    width: 4.0625rem;
+    height: 3.75rem;
+    position: relative;
+    background-size: contain;
+}
+
+.weight__amount {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 52%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    font-size: 1.25rem;
+    font-family: Gagalin-Regular;
+    font-weight: normal;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+.weight__title {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #fff;
+    font-family: Gagalin-Regular;
+    font-weight: normal;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+.composition {
+    position: absolute;
+    top: 1.25rem;
+    background: rgba(227, 80, 40, 0.4);
+    width: 5.625rem;
+    height: 5.625rem;
+    border-radius: 0.3125rem;
+    transition: .3s;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include tablets {
+        top: 0;
+    }
+
+    @include phones {
+        position: static;
+        margin-top: -4.625rem;
+    }
+}
+
+.composition.composition__active {
+    background: #e35028;
+}
+
+.composition.composition__active .composition__dropdown {
+    left: 100%;
+    opacity: 1;
+
+    @include phones {
+        left: 5.8125rem;
+        right: 0;
+    }
+}
+
+.composition__icon {
+    height: 60%;
+    fill: #fff;
+    width: 2.875rem;
+    height: 2.75rem;
+}
+
+.composition__icon-text {
+    color: white;
+    font-size: 0.875rem;
+    font-family: Gagalin-Regular;
+    font-weight: normal;
+    font-style: normal;
+    text-transform: uppercase;
+    text-align: center; 
+}
+
+.composition__dropdown {
+    padding: 1.25rem;
+    background: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    width: 16.875rem;
+    border-radius: 0.4375rem;
+    left: -9999px;
+    opacity: 0;
+    transition: opacity .3s;
+    z-index: 10;
+    top: 0; 
+
+    @include phones {
+        width: auto;
+    }
+}
+
+.dropdown__list {
+    width: 100%;
+
+    @include phones {
+        width: 80%;
+    }
+}
+
+.dropdown__row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.625rem;
+}
+
+.dropdown__content {
+    padding-left: 1.25rem;
+}
+
+.dropdown__content:last-child {
+    margin-left: auto;
+}
+
+.dropdown__content:first-child {
+    padding-left: 0;
+}
+
+.dropdown__content-svg {
+    width: 2.6875rem;
+    height: 2.6875rem;
+}
+
+.dropdown__item {
+    font-family: Ubuntu, Verdana, Arial, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.section__center-burger {
+
+    @include tablets {
+        text-align: center;
+    }
+
+    @include small-phones {
+        font-size: 3.125rem;
+    }
+}
+
+
+
+
