@@ -8,6 +8,10 @@ body{
     font-family: Ubuntu, Verdana, Arial, sans-serif;
 }
 
+body.body__hide {
+    overflow: hidden;
+}
+
                             /*    variables */
 
 $tablets: 768px;

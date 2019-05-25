@@ -21,6 +21,7 @@
     text-transform: uppercase;
     margin-bottom: 3.125rem;
 
+
     @include phones {
         font-size: 3.125rem;
         text-align: center;
@@ -31,5 +32,16 @@
 
     @include phones {
         font-size: 4.125rem;
+    }
+}
+
+.section__title-margin {
+
+    @include tablets {
+        margin-left: 6rem;
+    }
+
+    @include small-phones {
+        margin-left: 0;
     }
 }

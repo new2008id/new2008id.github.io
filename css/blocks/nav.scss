@@ -12,6 +12,11 @@
         display: block;
         clear: both;
     }
+
+    @include tablets {
+        text-align: center;
+        
+    }
 }
 
 .nav__item {

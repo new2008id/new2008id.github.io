@@ -120,6 +120,10 @@
     font-size: 0.875rem;
     margin-bottom: 1.5625rem; 
 
+    @include tablets {
+        font-size: 1.875rem;
+    }
+
     @include phones {
         font-size: 1.6rem;
     }
