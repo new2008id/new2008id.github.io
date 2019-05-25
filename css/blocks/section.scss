@@ -7,6 +7,7 @@
 
     @include tablets {
         overflow: hidden;
+        min-height: initial;
     }
 }
 
@@ -20,16 +21,27 @@
     text-transform: uppercase;
     margin-bottom: 3.125rem;
 
-    @include tablets {
-        font-size: 4.125rem;
-        text-align: center;
-        width: 100%;
-        margin-bottom: 2.125rem;
-        
-    }
 
     @include phones {
         font-size: 3.125rem;
-        margin-bottom: 4rem;
+        text-align: center;
+        width: 100%;
+        margin-top: 0;              /*Правка */
+        margin-bottom: 1rem;
+    }
+
+    @include phones {
+        font-size: 4.125rem;
+    }
+}
+
+.section__title-margin {
+
+    @include tablets {
+        margin-left: 6rem;
+    }
+
+    @include small-phones {
+        margin-left: 0;
     }
 }
