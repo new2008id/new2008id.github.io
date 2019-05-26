@@ -11,15 +11,15 @@ let composition = (function (optionsOne) {
   }
 
   let addListenersTwo = function () {
-    linkOpen.addEventListener('click', _toggleComposition);
+    linkOpen.addEventListener('mouseenter', _toggleComposition);
 
     if (linkTwo) {
       let linkTwo = document.getElementById('linkTwo');
 
-      linkTwo.addEventListener('click', _toggleComposition);
+      linkTwo.addEventListener('mouseleave', _toggleComposition);
 
       if (linkClose) {
-        linkClose.addEventListener('click', _toggleComposition);
+        linkClose.addEventListener('mouseleave', _toggleComposition);
       }
     }
 
