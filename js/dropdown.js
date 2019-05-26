@@ -13,10 +13,16 @@ let composition = (function (optionsOne) {
   let addListenersTwo = function () {
     linkOpen.addEventListener('click', _toggleComposition);
 
-    let linkTwo = document.getElementById('linkTwo');
+    if (linkTwo) {
+      let linkTwo = document.getElementById('linkTwo');
 
-    linkTwo.addEventListener('click', _toggleComposition);
-    linkClose.addEventListener('click', _toggleComposition);
+      linkTwo.addEventListener('click', _toggleComposition);
+
+      if (linkClose) {
+        linkClose.addEventListener('click', _toggleComposition);
+      }
+    }
+
   }
 
   return {

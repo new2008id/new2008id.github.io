@@ -14,9 +14,12 @@ let menu = (function (options) {
     buttonOpen.addEventListener('click', _toggleMenu);
 
     let link = document.getElementById('link');
+    
+    if (link) {
+      link.addEventListener('click', _toggleMenu);
+      buttonClose.addEventListener('click', _toggleMenu);
+    }
 
-    link.addEventListener('click', _toggleMenu);
-    buttonClose.addEventListener('click', _toggleMenu);
   }
 
   return {
