@@ -1,0 +1,47 @@
+.section {
+    height: 100vh;
+    min-height: 40.625rem;
+    position: relative;
+    display: flex;
+    overflow: auto;
+
+    @include tablets {
+        overflow: hidden;
+        min-height: initial;
+    }
+}
+
+
+.section__title {
+    color: #f9b43b;
+    font-size: 4.6875rem;
+    font-family: Gagalin-Regular;
+    font-weight: normal;
+    
+    text-transform: uppercase;
+    margin-bottom: 3.125rem;
+
+
+    @include phones {
+        font-size: 3.125rem;
+        text-align: center;
+        width: 100%;
+        margin-top: 0;              /*Правка */
+        margin-bottom: 1rem;
+    }
+
+    @include phones {
+        font-size: 4.125rem;
+    }
+}
+
+.section__title-margin {
+
+    @include tablets {
+        margin-left: 6rem;
+    }
+
+    @include small-phones {
+        margin-left: 0;
+    }
+}
