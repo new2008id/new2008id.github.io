@@ -13,7 +13,7 @@ let menu = (function (options) {
   let addListeners = function () {
     buttonOpen.addEventListener('click', _toggleMenu);
 
-    /* Делегирование */  
+    // Делегирование  
   
     menu.addEventListener('click', function(e) {
       target = e.target;
@@ -44,7 +44,7 @@ let menu = (function (options) {
 
 menu.open();
 
-/* Dropdown */
+// Dropdown
 
 let composition = (function (optionsOne) {
   let linkOpen = document.querySelector(optionsOne.linkOpen);
