@@ -49,11 +49,11 @@ menu.open();
 let composition = (function (optionsOne) {
   let linkOpen = document.querySelector(optionsOne.linkOpen);
   let linkClose = document.querySelector(optionsOne.linkClose);
-  let composition = document.querySelector(optionsOne.composition);
+  let ingredients = document.querySelector(optionsOne.ingredients);
 
   let _toggleComposition = function (e) {
     e.preventDefault();
-    composition.classList.toggle('composition__active');
+    ingredients.classList.toggle('composition__active');
   }
 
   let addListenersTwo = function () {
@@ -77,7 +77,7 @@ let composition = (function (optionsOne) {
 })
   ({
     linkOpen: '#linkTwo',
-    composition: '#composition__open'
+    ingredients: '#composition__open'
   });
 
 composition.openDropdown();
