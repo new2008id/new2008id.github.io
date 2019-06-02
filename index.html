@@ -140,12 +140,12 @@
           <div class="slider__wrapper">
             <div class="slider__controls">
               <a href="#" onclick="return false" class="slider__button slider__button-next">
-                <svg class="slider__arrow">
+                <svg class="slider__arrow slider__arrow-next">
                   <use xlink:href="../sprite.svg#arrow"></use>
                 </svg>
               </a>
               <a href="#" onclick="return false" class="slider__button slider__button-prev">
-                <svg class="slider__arrow">
+                <svg class="slider__arrow slider__arrow-prev">
                   <use xlink:href="../sprite.svg#arrow"></use>
                 </svg>
               </a>
@@ -645,7 +645,7 @@
                   котлетка
                   такой сочной, а сыр таким расплавленным.</div>
                 <div class="review__button">
-                  <button type="button" class="rewiew__btn">Подробнее</button>
+                  <button type="button" class="rewiew__btn" data-src="#modal__window">Подробнее</button>
                 </div>
               </div>
             </div>
@@ -662,7 +662,7 @@
                   котлетка
                   такой сочной, а сыр таким расплавленным.</div>
                 <div class="review__button">
-                  <button type="button" class="rewiew__btn">Подробнее</button>
+                  <button type="button" class="rewiew__btn" data-src="#modal__window">Подробнее</button>
                 </div>
               </div>
             </div>
@@ -679,7 +679,7 @@
                   котлетка
                   такой сочной, а сыр таким расплавленным.</div>
                 <div class="review__button">
-                  <button type="button" class="rewiew__btn">Подробнее</button>
+                  <button type="button" class="rewiew__btn" data-src="#modal__window">Подробнее</button>
                 </div>
               </div>
             </div>
@@ -696,7 +696,7 @@
                   котлетка
                   такой сочной, а сыр таким расплавленным.</div>
                 <div class="review__button">
-                  <button type="button" class="rewiew__btn">Подробнее</button>
+                  <button type="button" class="rewiew__btn" data-src="#modal__window">Подробнее</button>
                 </div>
               </div>
             </div>
@@ -713,7 +713,7 @@
                   котлетка
                   такой сочной, а сыр таким расплавленным.</div>
                 <div class="review__button">
-                  <button type="button" class="rewiew__btn">Подробнее</button>
+                  <button type="button" class="rewiew__btn" data-src="#modal__window">Подробнее</button>
                 </div>
               </div>
             </div>
@@ -730,7 +730,7 @@
                   котлетка
                   такой сочной, а сыр таким расплавленным.</div>
                 <div class="review__button">
-                  <button type="button" class="rewiew__btn">Подробнее</button>
+                  <button type="button" class="rewiew__btn" data-src="#modal__window">Подробнее</button>
                 </div>
               </div>
             </div>
@@ -747,7 +747,7 @@
                   котлетка
                   такой сочной, а сыр таким расплавленным.</div>
                 <div class="review__button">
-                  <button type="button" class="rewiew__btn">Подробнее</button>
+                  <button type="button" class="rewiew__btn" data-src="#modal__window">Подробнее</button>
                 </div>
               </div>
             </div>
@@ -764,7 +764,7 @@
                   котлетка
                   такой сочной, а сыр таким расплавленным.</div>
                 <div class="review__button">
-                  <button type="button" class="rewiew__btn">Подробнее</button>
+                  <button type="button" class="rewiew__btn" data-src="#modal__window">Подробнее</button>
                 </div>
               </div>
             </div>
@@ -774,41 +774,40 @@
       <section class="section form">
         <div class="container">
           <h2 class="section__title section__title-center">Закажите доставку</h2>
-          <form action="" class="main__form">
+          <form action="" class="main__form" id="main__form">
             <div class="form__col">
               <div class="form__row">
                 <label class="form__block">
                   <div class="form__label">Имя</div>
-                  <input class="form__input" type="text" name="name" placeholder="" required>
+                  <input class="form__input" type="text" name="name" placeholder="">
                 </label>
                 <label class="form__block">
                   <div class="form__label">Телефон</div>
-                  <input class="form__input form__input-phone" type="text" name="phone" placeholder="89212264923"
-                    required>
+                  <input class="form__input form__input-phone" type="text" name="phone" placeholder="89212264923">
                 </label>
               </div>
               <div class="form__row">
                 <label class="form__block">
                   <div class="form__label">Улица</div>
-                  <input class="form__input" type="text" placeholder="" required>
+                  <input class="form__input" placeholder="">
                 </label>
               </div>
               <div class="form__row">
                 <label class="form__block">
                   <div class="form__label">Дом</div>
-                  <input class="form__input" name="home" type="text" placeholder="" required>
+                  <input class="form__input" name="home" type="text" placeholder="">
                 </label>
                 <label class="form__block">
                   <div class="form__label">Корпус</div>
-                  <input class="form__input" name="part" type="text" placeholder="" required>
+                  <input class="form__input" name="part" type="text" placeholder="">
                 </label>
                 <label class="form__block">
                   <div class="form__label">Квартира</div>
-                  <input class="form__input" name="appt" type="text" placeholder="" required>
+                  <input class="form__input" name="appt" type="text" placeholder="">
                 </label>
                 <label class="form__block">
                   <div class="form__label">Этаж</div>
-                  <input class="form__input" name="floor" type="text" placeholder="" required>
+                  <input class="form__input" name="floor" type="text" placeholder="">
                 </label>
               </div>
             </div>
@@ -840,7 +839,7 @@
                   </label>
                 </div>
                 <div class="form__row">
-                  <input type="submit" value="Заказать" class="form__button">
+                  <button type="submit" class="form__button">Заказать</button>
                   <input type="reset" value="Очистить" class="form__button form__button-reset">
                 </div>
               </div>
@@ -952,6 +951,34 @@
         <a href="#" class="points__link"></a>
       </li>
     </ul>
+    <div class="modal__window" id="modal__window">
+      <!-- <a href="#" class="modal__window-close">
+        <svg class="close__btn">
+          <use xlink:href="../sprite.svg#close"></use>
+        </svg>
+      </a> -->
+      <div class="modal__content">
+        <div class="modal__title">Констнтин Спилберг</div>
+        <div class="modal__desc">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда
+          не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все
+          о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть
+          такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
+        </div>
+      </div>
+    </div>
+    <script type='template' id="overlay1">
+        <!-- <a href="#" class="modal__window-close">
+            <svg class="close__btn">
+              <use xlink:href="../sprite.svg#close"></use>
+            </svg>
+          </a> -->
+      <div class="modal__title">Констнтин Спилберг</div>
+        <div class="modal__desc">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда
+          не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все
+          о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть
+          такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
+        </div>
+    </script>
   </div>
   <script src="../js/main.js"></script>
 </body>
