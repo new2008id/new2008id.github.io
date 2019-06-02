@@ -28,12 +28,14 @@
 }
 
 .slider__item {
+    position: relative;
     padding-bottom: 5.3125rem;
     display: flex;
     max-width: 100%;
     flex-shrink: 0;
     align-items: center;
     opacity: 1;
+    
     
     @include tablets {
         padding: 0;
@@ -46,9 +48,14 @@
     }
 }
 
-.slider__item-active {
-    opacity: 1;
+.slider__item:first-child .slider__item:last-child {
+    transition: .5s;
 }
+
+.slider__list.right {
+    transition: .5s;
+}
+
 
 
 
@@ -265,6 +272,11 @@
     @include phones {
         position: static;
         margin-top: -4.625rem;
+        margin-right: 27rem;
+    }
+
+    @include small-phones {
+        margin-right: 16rem;
     }
 }
 
