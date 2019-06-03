@@ -1621,12 +1621,8 @@ footer {
   align-items: center; }
   @media screen and (max-width: 768px) {
     .composition {
-      top: 0; } }
-  @media screen and (max-width: 480px) {
-    .composition {
-      position: static;
-      margin-top: -4.625rem;
-      margin-right: 27rem; } }
+      top: 0;
+      left: 0; } }
   @media screen and (max-width: 320px) {
     .composition {
       margin-right: 16rem; } }
@@ -1637,10 +1633,6 @@ footer {
 .composition.composition__active .composition__dropdown {
   left: 100%;
   opacity: 1; }
-  @media screen and (max-width: 480px) {
-    .composition.composition__active .composition__dropdown {
-      left: 5.8125rem;
-      right: 0; } }
 
 .composition__icon {
   height: 60%;
