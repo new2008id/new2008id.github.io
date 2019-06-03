@@ -1262,7 +1262,7 @@ footer {
   border-radius: 5px; }
 
 .hamburger__menu {
-  position: absolute;
+  position: fixed;
   left: 0rem;
   right: 0;
   background: rgba(47, 50, 52, 0.95);
@@ -1298,17 +1298,19 @@ footer {
   width: auto; }
   @media screen and (max-width: 768px) {
     .nav__hamburger {
-      display: block;
-      position: relative;
-      bottom: 245rem; } }
+      position: fixed;
+      bottom: 6rem;
+      right: 4rem; } }
   @media screen and (max-width: 480px) {
     .nav__hamburger {
-      position: relative;
-      bottom: 195rem; } }
+      position: fixed;
+      bottom: 25rem;
+      right: 8rem; } }
   @media screen and (max-width: 320px) {
     .nav__hamburger {
-      position: relative;
-      bottom: 142rem; } }
+      position: fixed;
+      bottom: 6rem;
+      right: 4rem; } }
 
 .nav__hamburger .nav__list {
   -webkit-box-orient: vertical;
@@ -1379,7 +1381,8 @@ footer {
   position: relative;
   -webkit-transition: .5s;
   -o-transition: .5s;
-  transition: .5s; }
+  transition: .5s;
+  right: 0; }
 
 .slider__item {
   position: relative;
