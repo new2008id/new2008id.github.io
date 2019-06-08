@@ -8,12 +8,13 @@
   <title>Document</title>
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/main.css">
+
 </head>
 
 <body>
   <div class="wrapper">
     <div id="content">
-      <section class="section main">
+      <section class="section main is-active">
         <div class="container main__wrapper">
           <header class="header">
             <a href="#" class="logo">
@@ -26,30 +27,30 @@
               <nav class="nav">
                 <ul class="nav__list">
                   <li class="nav__item">
-                    <a class="nav__link" href="#">О нас</a>
+                    <a class="nav__link" href="#" data-scroll-to="1">О нас</a>
                   </li>
                   <li class="nav__item">
-                    <a class="nav__link" href="#">Бургеры</a>
+                    <a class="nav__link" href="#" data-scroll-to="2">Бургеры</a>
                   </li>
                   <li class="nav__item">
-                    <a class="nav__link" href="#">Команда</a></li>
+                    <a class="nav__link" href="#" data-scroll-to="3">Команда</a></li>
                   <li class="nav__item">
-                    <a class="nav__link" href="#">Меню</a>
+                    <a class="nav__link" href="#" data-scroll-to="4">Меню</a>
                   </li>
                   <li class="nav__item">
-                    <a class="nav__link" href="#">Отзывы</a>
+                    <a class="nav__link" href="#" data-scroll-to="5">Отзывы</a>
                   </li>
                   <li class="nav__item">
-                    <a class="nav__link" href="#">Как мы работаем</a>
+                    <a class="nav__link" href="#" data-scroll-to="6">Как мы работаем</a>
                   </li>
                   <li class="nav__item">
-                    <a class="nav__link" href="#">Контакты</a>
+                    <a class="nav__link" href="#" data-scroll-to="8">Контакты</a>
                   </li>
                 </ul>
               </nav>
             </div>
             <div class="header__links">
-              <button class="btn btn-order" type="button">Заказать</button>
+              <button class="btn btn-order" type="button" data-scroll-to="7">Заказать</button>
             </div>
           </header>
           <div class="main__container">
@@ -62,7 +63,7 @@
             </div>
           </div>
           <div class="down-arrow__icon">
-            <button class="down-arrow" type="button">
+            <button class="down-arrow" type="button" data-scroll-to="1">
               <svg class="down-arrow__img">
                 <use xlink:href="../sprite.svg#arrow"></use>
               </svg>
@@ -266,7 +267,7 @@
                         <div class="slider__price-amount">500</div>
                         <div class="slider__price-currency">рублей</div>
                       </div>
-                      <button class="btn btn__toOrder">Заказать</button>
+                      <button class="btn btn__toOrder" data-scroll-to="7">Заказать</button>
                     </div>
                   </div>
                 </li>
@@ -384,7 +385,7 @@
                         <div class="slider__price-amount">500</div>
                         <div class="slider__price-currency">рублей</div>
                       </div>
-                      <button class="btn btn__toOrder">Заказать</button>
+                      <button class="btn btn__toOrder" data-scroll-to="7">Заказать</button>
                     </div>
                   </div>
                 </li>
@@ -502,11 +503,10 @@
                         <div class="slider__price-amount">500</div>
                         <div class="slider__price-currency">рублей</div>
                       </div>
-                      <button class="btn btn__toOrder">Заказать</button>
+                      <button class="btn btn__toOrder" data-scroll-to="7">Заказать</button>
                     </div>
                   </div>
                 </li>
-
                 <!-- Two Li -->
               </ul>
             </div>
@@ -771,6 +771,35 @@
           </li>
         </ul>
       </section>
+      <section class="section video">
+        <div class="container__video">
+          <h2 class="section__title section__title-center section__title-black ">Как мы работаем</h2>
+          <div class="video__player">
+            <video id='player' poster="../img/video/player/cover.png">
+              <source src="../source/burgers.mp4" type="video/mp4">
+            </video>
+            <svg class="play video__player-svg">
+              <use xlink:href="../sprite.svg#playVideo"></use>
+            </svg>
+          </div>
+          <div class="video__toolbar">
+            <div class="duration">
+              <svg class="play duration__svg-gray">
+                <use xlink:href="../sprite.svg#playVideo"></use>
+              </svg>
+              <input type="range" class="duration__length" id="durationLevel">
+            </div>
+            <div class="video__sound">
+              <svg class="sound__video-svg" id="mic">
+                <use xlink:href="../sprite.svg#volume"></use>
+              </svg>
+              <div class="sound__volume">
+                <input type="range" class="duration__length duration__length-other" id="micLevel">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section class="section form">
         <div class="container">
           <h2 class="section__title section__title-center">Закажите доставку</h2>
@@ -848,9 +877,7 @@
         </div>
       </section>
       <section class="section map">
-        <div class="map__img">
-          <img src="../img/contacts/bg/Layer_4.png" alt="Layer_4" class="map__img-nav">
-        </div>
+          <div id="map" class="map__navigation"></div>
         <footer class="footer">
           <div class="container footer__container">
             <div class="footer__col footer__contacts">
@@ -896,30 +923,30 @@
     <a href='#' class="hamburger__menu-link" id="open" onclick="return false">
       <div class="hamburger__menu-link__bars"></div>
     </a>
-    <div class="hamburger__menu" id="overlay" >
+    <div class="hamburger__menu" id="overlay">
       <div class="hamburger__menu-items" id="close">
         <nav class="nav nav__hamburger">
           <ul class="nav__list">
             <li class="nav__item nav__item-hamburger">
-              <a href="#" class="nav__link">О нас</a>
+              <a href="#" class="nav__link" data-scroll-to="1">О нас</a>
             </li>
             <li class="nav__item nav__item-hamburger">
-              <a href="#" class="nav__link">Бургеры</a>
+              <a href="#" class="nav__link" data-scroll-to="2">Бургеры</a>
             </li>
             <li class="nav__item nav__item-hamburger">
-              <a href="#" class="nav__link">Команда</a>
+              <a href="#" class="nav__link" data-scroll-to="3">Команда</a>
             </li>
             <li class="nav__item nav__item-hamburger">
-              <a href="#" class="nav__link">Меню</a>
+              <a href="#" class="nav__link" data-scroll-to="4">Меню</a>
             </li>
             <li class="nav__item nav__item-hamburger">
-              <a href="#" class="nav__link">Отзывы</a>
+              <a href="#" class="nav__link" data-scroll-to="5">Отзывы</a>
             </li>
             <li class="nav__item nav__item-hamburger">
-              <a href="#" class="nav__link">Как мы работаем</a>
+              <a href="#" class="nav__link" data-scroll-to="6">Как мы работаем</a>
             </li>
             <li class="nav__item nav__item-hamburger">
-              <a href="#" class="nav__link">Контакты</a>
+              <a href="#" class="nav__link" data-scroll-to="8">Контакты</a>
             </li>
           </ul>
         </nav>
@@ -927,28 +954,31 @@
     </div>
     <ul class="points__list">
       <li class="points__item active">
-        <a href="#" class="points__link"></a>
+        <a href="#" class="points__link" data-scroll-to="0"></a>
       </li>
       <li class="points__item">
-        <a href="#" class="points__link"></a>
+        <a href="#" class="points__link" data-scroll-to="1"></a>
       </li>
       <li class="points__item">
-        <a href="#" class="points__link"></a>
+        <a href="#" class="points__link" data-scroll-to="2"></a>
       </li>
       <li class="points__item">
-        <a href="#" class="points__link"></a>
+        <a href="#" class="points__link" data-scroll-to="3"></a>
       </li>
       <li class="points__item">
-        <a href="#" class="points__link"></a>
+        <a href="#" class="points__link" data-scroll-to="4"></a>
       </li>
       <li class="points__item">
-        <a href="#" class="points__link"></a>
+        <a href="#" class="points__link" data-scroll-to="5"></a>
       </li>
       <li class="points__item">
-        <a href="#" class="points__link"></a>
+        <a href="#" class="points__link" data-scroll-to="6"></a>
       </li>
       <li class="points__item">
-        <a href="#" class="points__link"></a>
+        <a href="#" class="points__link" data-scroll-to="7"></a>
+      </li>
+      <li class="points__item">
+        <a href="#" class="points__link" data-scroll-to="8"></a>
       </li>
     </ul>
     <div class="modal__window" id="modal__window">
@@ -980,6 +1010,10 @@
         </div>
     </script>
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.3/mobile-detect.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   <script src="../js/main.js"></script>
 </body>
 
