@@ -675,7 +675,7 @@ footer {
     margin-left: 0; } }
 
 .team {
-  background: url("/img/team/bg/SBS_1255-X2.png") top no-repeat;
+  background: url("../img/team/bg/SBS_1255-X2.png") top no-repeat;
   background-size: cover; }
   .team .team .section__title {
     margin-bottom: 5rem; }
@@ -1557,7 +1557,7 @@ footer {
       left: auto; } }
 
 .weight__measure {
-  background: url("../../img/svg/slider/kkal.svg") 50% no-repeat;
+  background: url("../img/svg/slider/kkal.svg") 50% no-repeat;
   width: 4.0625rem;
   height: 3.75rem;
   position: relative;
