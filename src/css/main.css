@@ -822,7 +822,7 @@ footer {
   font-size: 0.875rem; }
 
 .menu {
-  background: url("../../img/menu/bg/photo-1428660386617-8d277e7deaf2.png") 50% no-repeat;
+  background: url("../img/menu/bg/photo-1428660386617-8d277e7deaf2.png") 50% no-repeat;
   background-size: cover;
   position: relative; }
 
@@ -1009,7 +1009,7 @@ footer {
     opacity: 1; }
 
 .form {
-  background: url("../../img/form/bg/bg-texture.png");
+  background: url("../img/form/bg/bg-texture.png");
   background-size: cover;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1776,7 +1776,7 @@ footer {
   height: 100%; }
 
 .video {
-  background: url("../../img/video/bg/bg_video.png") center center/cover no-repeat;
+  background: url("../img/video/bg/bg_video.png") center center/cover no-repeat;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
